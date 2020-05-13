@@ -66,8 +66,9 @@ app.post('/api/upload-avatar', async (req, res) => {
                 status: false,
                 message: 'No file uploaded'
             });
-            console.log(req.files);
+            console.log('0', req.files);
         } else {
+            console.log('1', req.files);
             //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
             let avatar = req.files.avatar;
             
