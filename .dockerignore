@@ -1,0 +1,8 @@
+# uploads
+public/uploads/**/*
+node_modules
+.git
+.gitignore
+README.md
+screenshot
+.env

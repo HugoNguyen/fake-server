@@ -23,10 +23,10 @@ app.use(morgan('dev'));
 app.use('/',fileServerMiddleware);//Mount the middleware for this app.
 
 //start app 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => 
-  console.log(`App is listening on port ${port}.`)
+  console.log(`App ${process.env.APPNAME || '{{APPNAME}}'} is listening on port ${port}.`)
 );
 
 app.get('/ping', function(req, res) {
